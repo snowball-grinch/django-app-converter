@@ -5,11 +5,13 @@ from length.forms import LengthConverterForm
 def convert(request):
     convert_to_metre = {
         "centimetre": 0.01,
-        "metre": 1.0
+        "metre": 1.0,
+        "mile": 1609.34,
     }
     convert_from_metre = {
         "centimetre": 100,
-        "metre": 1.0
+        "metre": 1.0,
+        "mile": 0.000621371,
     }
     form = LengthConverterForm()
     if request.GET:
